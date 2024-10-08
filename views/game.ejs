@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park My Spot</title>
+    <link rel="stylesheet" href="/css/Admin.css">
+</head>
+
+<body>
+
+    <!-- Navbar  Section -->
+
+
+
+    <!-- 
+    <a class="a" href="/Reservation">Reservation</a>
+    <br><a class="a" href="/users">Users</a> -->
+
+
+
+
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Team Name</th>
+            <th>Player Name</th>
+            <th>Player Uid</th>
+            <th>CreatedAt</th>
+            <th>UpdatedAt</th>
+
+        </tr>
+        <% datas.forEach(data=> { %>
+            <tr>
+                <td>
+                    <%= data._id %>
+                </td>
+                <td>
+                    <%= data.team.team_name %>
+                </td>
+                <td>
+                    <%= data.team.player1.name1 %>
+                </td>
+
+                <td>
+                    <%= data.team.player1.uid1 %>
+                </td>
+                <td>
+                    <%= data.createdAt %>
+                </td>
+                <td>
+                    <%= data.updatedAt %>
+                </td>
+
+                
+                <td>
+                    <a class="delete" href="/admin/game/<%= data._id %>"> <button>Delete</button></a>
+                    <br>
+                </td>
+            </tr>
+
+            <% }); %>
+
+    </table>
+</body>
+
+</html>

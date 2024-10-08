@@ -8,12 +8,12 @@ const cookiePaser = require("cookie-parser");
 // const Blog = require("./models/blog");
 
 const userRoute = require("./routes/user");
-// const adminRoute = require("./routes/admin");
+const adminRoute = require("./routes/admin");
 
 
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 
 mongoose.set('strictQuery', true);
 mongoose
@@ -34,6 +34,6 @@ app.get("/", async (req, res) => {
 });
 
 app.use("/user", userRoute);
-// app.use("/admin", adminRoute);
+app.use("/admin", adminRoute);
 
 app.listen(PORT, () => console.log(`Server Started at PORT:${PORT}`));
