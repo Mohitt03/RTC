@@ -24,13 +24,17 @@ router.get("/register1", (req, res) => {
 
 router.post("/register1", async (req, res) => {
     const game = await Game.create({
-        team: {
-            team_name: req.body.team_name,
-            player1: {
-                name1: req.body.name1,
-                uid1: req.body.uid1
-            }
-        }
+        u_name: req.body.u_name,
+        team_name: req.body.team_name,
+        leader: {
+            name: req.body.name,
+            uid: req.body.uid
+        },
+        phone: req.body.phone,
+        whats_no: req.body.whats_no,
+        recomended: req.body.recomended,
+        time: req.body.time,
+        value: req.body.value
     })
     res.render("complete")
 })

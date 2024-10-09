@@ -1,5 +1,3 @@
-
-
 const path = require("path");
 const express = require("express");
 const mongoose = require("mongoose");
@@ -28,9 +26,7 @@ app.use(cookiePaser());
 // app.use(express.static(path.resolve("./public")));
 
 app.get("/", async (req, res) => {
-  res.render("home", {
-    user: req.user
-  });
+  res.render("register1");
 });
 
 app.use("/user", userRoute);

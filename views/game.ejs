@@ -25,11 +25,18 @@
     <table>
         <tr>
             <th>ID</th>
+            <th>User Name</th>
             <th>Team Name</th>
-            <th>Player Name</th>
-            <th>Player Uid</th>
+            <th>Leader Name</th>
+            <th>Leader Uid</th>
+            <th>Contact No</th>
+            <th>Whatsapp No</th>
+            <th>Recomended by</th>
+            <th>Time</th>
+            <th>Paid Value</th>
+            <!-- <th>Payment Status+img</th> -->
             <th>CreatedAt</th>
-            <th>UpdatedAt</th>
+            <!-- <th>UpdatedAt</th> -->
 
         </tr>
         <% datas.forEach(data=> { %>
@@ -38,21 +45,44 @@
                     <%= data._id %>
                 </td>
                 <td>
-                    <%= data.team.team_name %>
+                    <%= data.u_name %>
                 </td>
                 <td>
-                    <%= data.team.player1.name1 %>
+                    <%= data.team_name %>
+                </td>
+                <td>
+                    <%= data.leader.name %>
                 </td>
 
                 <td>
-                    <%= data.team.player1.uid1 %>
+                    <%= data.leader.uid %>
                 </td>
+                <td>
+                    <%= data.phone %>
+                </td>
+                <td>
+                    <%= data.whats_no %>
+                </td>
+
+                <td>
+                    <%= data.recomended %>
+                </td>
+                <td>
+                    <%= data.time %>
+                </td>
+                <td>
+                    <%= data.value %>
+                </td>
+
+                <!-- <td>
+                    <%= data.paymentstatus %>
+                </td> -->
                 <td>
                     <%= data.createdAt %>
                 </td>
-                <td>
+                <!-- <td>
                     <%= data.updatedAt %>
-                </td>
+                </td> -->
 
                 
                 <td>
