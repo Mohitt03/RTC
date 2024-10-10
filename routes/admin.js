@@ -25,10 +25,10 @@ router.get('/game/:id', async (req, res) => {
 
     try {
         const { id } = req.params;
-        const parking = await Parking.findByIdAndRemove(id);
+        const game = await Game.findByIdAndDelete(id);
 
 
-        if (!parking) {
+        if (!game) {
             return res.status(404).json({ message: 'User not found' });
         }
         return res.redirect('back');
