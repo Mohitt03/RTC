@@ -11,25 +11,49 @@ body {
     background-color: aqua;
 }
 
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+    background: tranparent; 
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: #555; 
+    border-radius: 20px;
+    }
+    
+
 table,
 th,
 td {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-collapse: collapse;
 }
 
-th,
-td {
-    padding: 10px;
+th {
+    padding: 20px;
+    text-align: center !important;
 }
 
 td {
-    max-width: 217px;
-    overflow-x: scroll;
+    padding: 20px;
+}
+
+td {
+    /* max-width: 217px; */
+    overflow-x: auto;
+    text-align: center;
 }
 tr{
     max-height: 100px;
     overflow-y: scroll;
+    border-bottom: 2px solid #000    !important;
 
 }
 
@@ -48,4 +72,24 @@ tr{
     height: 44px;
     overflow-y: hidden;
     width: 243px;
+}
+
+.bg-black {
+    background-color: #000;
+    color: #fff;
+ 
+}
+
+.admin-container {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: auto;
+}
+
+.text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
