@@ -1,0 +1,65 @@
+.bgnew {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  /* background-image: radial-gradient(circle, #495762, #3d404a, #2e2b31, #1c191b, #000000); */
+  background-image: radial-gradient(circle, #374e63, #35394a, #2b2630, #1b161a, #000000);
+}
+.main-container {
+  display: flex;
+   align-items: center; 
+  height: 100vh;
+}
+.main-content {
+  background-color: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(15px);
+          border-radius: 30px;
+          height: 90vh;         
+         overflow-y: scroll;
+  
+}
+::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: tranparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #555; 
+border-radius: 20px;
+}
+
+.form-control {
+background: transparent !important;
+color: #fff;
+}
+.form-control:focus {
+color: #fff;
+border-color: #2689c7;
+}
+.form-label {
+color: #fff;
+}
+@media only screen and (max-width: 991px) {
+.px-5 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+.mx-5 {
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+}
+.form-floating label {
+color: #fff  !important;
+}
+.form-floating label::after  {
+background-color: transparent !important;
+}
